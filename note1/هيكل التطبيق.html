@@ -1,0 +1,113 @@
+<html lang="ar" dir="rtl">
+    <head>
+        <title>تطبيق المذكرة</title>
+        <link rel="stylesheet" href="https://cdn.rtlcss.com/bootstrap/v4.0.0/css/bootstrap.min.css" integrity="sha384-P4uhUIGk/q1gaD/NdgkBIl3a6QywJjlsFJFk7SPRdruoGddvRVSwv5qFnvZ73cpz" crossorigin="anonymous">
+        <style>
+            body{
+                padding: 20px;
+                background-color: rgb(0, 10, 54);
+                color: white;
+}
+            #list{
+                overflow: auto;
+                border: 1px solid #ddd;
+                width: 400px;
+                height: 400px;
+                list-style: none;
+                -webkit-padding-start: 0px;
+                margin-left: 0px;
+                margin-right: 0px;
+                border-radius: 4px;
+                -webkit-box-shadow:none;
+                box-shadow: none;
+                color:white;
+            }
+            #list li{
+                padding: 20px;
+                border: solid 1px #ddd;
+            }
+            #list li:hover{
+                cursor: pointer;
+            }
+            #edit-content{
+                width: 500px;
+            }
+            #list li.selected{
+                
+                background-color:rgb(47, 68, 255);
+            }
+            #div-list{
+                padding:20px;
+                display: inline-block;
+            }
+            .div-name{
+                display: inline-block;
+                width: 260px;
+            }
+            .div-date{
+                display: inline-block;
+                width: 90px;
+            }
+            #div-add{
+                padding: 20px;
+                width: 500px;
+            }
+            #div-edit{
+                color:white;
+                padding: 20px;
+                padding-top: 50;
+                display: inline-block;
+                vertical-align: top;
+            }
+            #div-edit.hide{
+                display: none;
+            }
+            .hide{
+                display: none;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1 class="text" style="color: white;">إضافة مذكرة</h1>
+        <div style="margin-right: 10px;">
+            <form>
+                <div class="form-group">
+                    <lable for="name" class="text">اسم المذكرة</lable><br>
+                    <input type="text" id="name" class="form-control" style="width: 500px;">
+                </div><br>
+                <div class="form-group">
+                    <lable class="text">المحتوى</lable><br>
+                    <textarea   rows="4" cols="50" id="content" class="form-control"style="width: 500px;"></textarea>
+                </div><br>
+                <button id="add" type="button" class="btn btn-primary">إضافة</button>
+            </form>
+            <div id="div-list">
+                <h3 class="text" style="color: white;">قائمة المذكرات</h3>
+                <ul id="list" class="text">
+                    
+                </ul>
+            </div>
+            <div id="div-edit" class="hide">
+                <form>
+                    <div class="form-group">
+                    <label class="text">تعديل الإسم</label>
+                    <input type="text"class="form-control" id="name-edit">
+                    </div>
+                    <div class="form-group">
+                        <label class="text">تعديل المحتوى</label>
+                        <textarea rows="4" cols="50" id="edit-content" class="form-control"></textarea>
+                    </div>
+                    <div>
+                        <button id="save" type="button" class="btn btn-primary">حفظ</button>
+                        <button id="remove" type="button" class="btn btn-danger">حذف</button>
+                        <button id="cancel" type="button" class="btn btn-default">إلغاء</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <script src="البرمجيات.js"></script>
+
+    </body>
+</html>
